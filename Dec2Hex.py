@@ -6,8 +6,11 @@ def decimal_to_hex(decimal_value):
     num = decimal_value
     
     print(f"Converting the Decimal Value {num} to Hex...")
-    
-    while num != 0:
+    if num ==0 :
+        print(f"Hexadecimal representation is: {hexadecimal}")
+        return "0"
+         
+    while num > 0:
         rem = num % 16
         hexadecimal = hex_chars[rem] + hexadecimal
         num //= 16
@@ -16,7 +19,7 @@ def decimal_to_hex(decimal_value):
     return hexadecimal  # Return the hexadecimal value for testing
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
+    if len(sys.argv) == 2:
         try:
             decimal_value = int(sys.argv[1])
             decimal_to_hex(decimal_value)
