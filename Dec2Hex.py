@@ -7,6 +7,7 @@ def decimal_to_hex(decimal_value):
     
     print(f"Converting the Decimal Value {num} to Hex...")
     if num ==0 :
+        hexadecimal = 0
         print(f"Hexadecimal representation is: {hexadecimal}")
         return "0"
          
