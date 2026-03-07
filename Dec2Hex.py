@@ -10,6 +10,15 @@ def decimal_to_hex(decimal_value):
         hexadecimal = 0
         print(f"Hexadecimal representation is: {hexadecimal}")
         return "0"
+    if num <0 :
+        num = abs(num)
+        while num > 0:
+            rem = num % 16
+            hexadecimal = hex_chars[rem] + hexadecimal
+            num //= 16
+        hexadecimal = '-' + hexadecimal
+        print(f"Hexadecimal representation is: {hexadecimal}")
+        return hexadecimal  # Return the hexadecimal value for testing
          
     while num > 0:
         rem = num % 16
